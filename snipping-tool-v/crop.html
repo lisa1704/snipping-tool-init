@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SNIPPING TOOL</title>
+    </head>
+    <body>
+        <canvas id='canvas' style="border: 1px solid; width: 800px; height: 600px;">
+            Sorry broser dont support canvas
+        </canvas>
+        <script>
+            //Cache reference to html element
+            var canvas = document.getElementById('canvas');
+            // set drawing surface dimenrsions to match canvas
+            canvas.width =canvas.scrollWidth;
+            canvas.height = canvas.scrollHeight;
+            //GET REFERENCE
+            var ctx = canvas.getContext('2d');
+
+            //create image object
+            var image = new Image();
+            //callback when image loaded
+            image.onload = function(){
+                //(image, srcX, srcY, srcWidth, srcHeight, x, y, width, height)
+                ctx.drawImage(image,0,0,image.naturalWidth /2, image.naturalHeight /2,10,10,400,500)
+            }
+
+
+            //load image
+            image.src = './image.jpg'
+        </script>
+    </body>
+</html>

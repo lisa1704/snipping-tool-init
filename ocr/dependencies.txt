@@ -1,0 +1,4 @@
+npm i tesseract.js
+npm install --save-dev nodemon
+npm install ejs express multer
+npm install -g nodemon

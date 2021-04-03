@@ -1,0 +1,6 @@
+npm init -y
+npm install ejs express multer tesseract.js
+npm install --save-dev nodemon
+npm uninstall tesseract.js
+npm install tesseract.js@1
+

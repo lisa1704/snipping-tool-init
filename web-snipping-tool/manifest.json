@@ -1,0 +1,22 @@
+{
+    "name":"My Snipping Tool",
+    "version": "0.0.1",
+    "description":"A snipping tool as a chrome web extension",
+    "manifest_version": 2,
+    "browser_action":{
+        "default_icon": "logo2.jpg",
+        "default_title":"Snipping Tool OCR"
+    },
+    "options_page":"options.html",
+    "background":{
+        "persistent": false,
+        "scripts":["background.js"]
+    },
+    "permissions":[
+        "activeTab",
+        "storage",
+        "<all_urls>"
+    ],
+    "content_security_policy":"script-src 'self' https://apis.google.com; object-src 'self'"
+    
+}

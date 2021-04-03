@@ -1,0 +1,19 @@
+{
+    "name":"Snipping Tool",
+    "version": "1.2",
+    "description":"A snipping tool as a chrome web extension",
+    "manifest_version": 2,
+    "browser_action":{
+        "default_popup":"popup.html",
+        "default_title":"Snipping tool"
+    },
+    "background":{
+        "persistent": false,
+        "scripts":["background.js"]
+    },
+    "permissions":[
+        "activeTab",
+        "storage",
+        "<all_urls>"
+    ]
+}

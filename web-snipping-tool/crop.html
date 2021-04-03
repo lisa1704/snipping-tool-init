@@ -1,0 +1,56 @@
+<!------/** function cropImage(){
+    if(!selection.startX){
+        alert("Please create a selection");
+        toggleSettings();
+        return;
+    }
+
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    var startX = selection.startX * offset.width;
+    var startY = selection.startY * offset.height;
+
+    var width =  selection.w*offset.width;
+    var height = selection.h* offset.height;
+
+    setImageProportions(browserWidth * 0.9, browserHeight*0.9);
+}
+**/
+ <html> 
+
+<head> 
+	<title> 
+		How to crop image 
+		using canvas? 
+	</title> 
+</head> 
+
+<body> 
+
+	<h2>Source Image</h2> 
+	<img id="myImage" src= 
+            "target"> 
+
+	<h2>Cropped Image</h2>    
+</html> 
+
+<input type="file" class="btn js-loadfile" value="Upload" />
+<button class="btn js-reset">Reset</button>
+<button class="btn js-crop">Crop</button>
+<div class="crop-wrapper">
+    <div class="top-overlay">
+    </div>
+    <div class="bottom-overlay">
+    </div>
+    <div class="left-overlay">
+    </div>
+    <div class="right-overlay">
+    </div>
+    <div class="overlay">
+        <div class="overlay-inner">
+        </div>
+    </div>
+    <img class="resize-image" src="scr" alt="image for resizing">
+</div>
+
+<script src="crop.js"></script>
+---->
