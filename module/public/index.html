@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/cropper/2.3.4/cropper.min.css'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	    <script src="https://kit.fontawesome.com/4414288e8e.js"></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/cropperjs/0.8.1/cropper.min.js'></script>
+        <link rel="stylesheet" href="/style/crop.css">
+        <title>Snipping Module</title>
+    </head>
+    <body>
+        <h1 style="font-weight: bold;">Snip and Capture from YouTube - Module</h1>
+        <!-----YT player ---->
+        <div id="player">  
+        </div>
+        <button id="snapvideo">Capture</button>
+        <br>
+        <!-----Timestamp ---->
+        <div onclick="displayTimeStamp()">
+        <h4>-- Click on the text to see the current timestamp of the video</h4>
+        <h2>Time Stamp: <span id="timestamp" style="background-color: deeppink;"></span> miliseconds</h2>
+        </div>
+        <br>
+        <h4>-- Click on the capture button to take a snapshot of the paused video</h4>
+        <!-----Snapped Canvas---->
+        <br>
+        <canvas id="snapcanvas" width="540" height="380"></canvas>
+        <style>img{height: 400px; width: 400px;border: 2px solid black;}</style>
+         <br><br><br><br>
+         <!-----Cropper ---->
+          <div class="myDiv">
+         <div class="row">
+            <h3>---- Right click on canvas to save image and upload it to cropper</h3>
+            <div class="box">
+                <br><br><br>
+              <input type="file" id="file-input">
+            </div>
+            <div class="box-2">
+             <div class="result"></div>
+            </div>
+           <div class="box-2 img-result hide">
+             <img class="cropped" src="" alt="">
+           </div>
+         </div>
+         <div class="box">
+            <div class="options hide">
+                <label> Width  </label>
+                <input type="number" class="img-w" value="300" min="100" max="1200" />
+            </div>
+            <button class="btn save hide">Save</button>
+            <a href="" class="btn download hide">Download</a>
+        </div>
+        </div>
+    </div>
+    <br>
+         <!-----Save image to database---->
+         <br>
+         <h3>-- Pass the downloaded image to save it to the database</h3>
+        <img id="myimage"> <label id="upProgress"></label> <br><br>
+        <input type="file" id="uploadimage"/>
+        <button onclick="uploadImage()">Upload Image</button>
+        <!-----<button id="retrieve" onclick="retrieveImage()">Retrieve Image</button> ---->
+
+        
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/upload.js"></script>
+    <script id="video" src="js/youtube.js"></script>
+    <script src="js/snap.js"></script>
+    <script src="js/crop.js"></script>
+    
+    </body>
+
+</html>
